@@ -6,6 +6,7 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.system.ApplicationPid;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -28,5 +29,13 @@ public class ConfigurationSingletonTest {
         //모두 같은 인스턴스를 참고
         Assertions.assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
         Assertions.assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
+    }
+
+    @Test
+    void configurationDeep(){
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
     }
 }
