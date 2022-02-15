@@ -13,9 +13,9 @@ public class OrderAPP {
 
     public static void main(String[] args) {
 
-//        AppConfig appConfig = new AppConfig();
-//        MemberService memberService = appConfig.memberService();
-//        OrderService orderService = appConfig.orderService();
+        //AppConfig appConfig = new AppConfig();
+        //MemberService memberService = appConfig.memberService();
+        //OrderService orderService = appConfig.orderService();
 
         //MemberService memberService = new MemberServiceImpl();
         //OrderService orderService = new OrderServiceImpl();
