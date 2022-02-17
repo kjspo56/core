@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService{
 
     //순수 인터페이스에만 의존
+
+    //필드 주입할때는 @Autowired로 넣어준다. 밑에 2개다 모두.
+
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
